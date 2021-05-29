@@ -1,0 +1,16 @@
+{
+  "name": "discord-user-lookup",
+  "version": "1.0.0",
+  "description": "A web API for getting info on a discord user using their id",
+  "main": "api/index.js",
+  "author": "Patrick Brennan (AM2i9)",
+  "license": "MIT",
+  "scripts": {
+    "start": "node api/index.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {}
+}
