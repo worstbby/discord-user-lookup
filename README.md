@@ -29,7 +29,8 @@ Response:
     "username":"AM2i9",
     "avatar":"e7e1676122ad03ece8db03be01ec042a",
     "discriminator":"0000",
-    "public_flags":128}
+    "public_flags":128
+}
 ```
 
 ### Get User Avatar
