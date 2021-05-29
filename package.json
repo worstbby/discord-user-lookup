@@ -5,7 +5,7 @@
   "main": "api/index.js",
   "author": "Patrick Brennan (AM2i9)",
   "scripts": {
-    "start": "node api/index.js"
+    "start": "node test.js"
   },
   "dependencies": {
     "axios": "^0.21.1",
