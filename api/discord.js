@@ -11,7 +11,7 @@ const getUser = async (id) => {
         })
         return response;
     } catch (error) {
-        return { data: "There was an internal issue with the API.", error: error };
+        return { data: { error: error } };
     }
 }
 
