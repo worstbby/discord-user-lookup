@@ -11,7 +11,7 @@ const getUser = async (id) => {
         })
         return response;
     } catch (error) {
-        return { data: { error: error.message, res: response };
+        return { data: { error: error.message };
     }
 }
 
