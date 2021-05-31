@@ -9,9 +9,8 @@ const http = rateLimit(axios.create({
         }
     ), 
     {
-        maxRequests: 15,
-        perMilliseconds: 1000,
-        maxRPS: 15,
+        maxRequests: 30,
+        perMilliseconds: 11000,
     }
 );
 
