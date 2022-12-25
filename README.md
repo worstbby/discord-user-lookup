@@ -1,49 +1,61 @@
-# Discord User Lookup
-
-## What is this?
-Discord User Lookup is a simple web API written in NodeJS for getting info about a user from the Discord API. It was created for the purpose of using the Discord API in a browser setting, which you can't do beacuse of Access-Allow-Control-Origin. This API uses a Bot token to make the call, and return the data in the response.
+## ¿Qué es esto?
+Discord User Lookup es una API web simple escrita en NodeJS para obtener información sobre un usuario de la API de Discord. Fue creado con el propósito de usar la API de Discord en una configuración de navegador, lo que no puede hacer debido a Access-Allow-Control-Origin. Esta API utiliza un token de bot para realizar la llamada y devolver los datos en la respuesta.
 
 ---
 
-# Usage:
+# Uso:
 
 ### Base URL:
 ```
-https://dislookup.am2i9.ml/api/
+https://discord-user-lookup.vercel.app/api/
 ```
 
-## Endpoints:
-
-
-### Get User
+### Obtener información de usuario
 **GET** `/user/<id>`
 
-Example usage: 
+Ejemplo de uso: 
 ```
-GET: https://dislookup.am2i9.ml/api/user/317734264424890368
+GET: https://discord-user-lookup.vercel.app/api/user/317734264424890368
 ```
-Response:
+Respuesta:
 ```json
 {
-    "id":"317734264424890368",
-    "username":"AM2i9",
-    "avatar":"e7e1676122ad03ece8db03be01ec042a",
-    "discriminator":"0000",
-    "public_flags":128
+  "id": "924328060738732062",
+  "username": "better",
+  "avatar": "a_f0ab44a112439bfcd82d578f946dab7b",
+  "discriminator": "0001",
+  "public_flags": 4194560,
+  "banner": "a_c3e4e3fee3b373ae410b3a9e73122e32",
 }
 ```
 
-### Get User Avatar
-**GET** `/avatar/<id>.<format>`
+### Obtener avatar de usuario
 
-Example usage: 
+**GET**: `/avatar/<id>.<format>`
+
+Ejemplo: 
 ```
-GET: https://dislookup.am2i9.ml/api/avatar/317734264424890368.webp
+GET: https://discord-user-lookup.vercel.app/api/avatar/924328060738732062.gif
 ```
 
-Response: My current pfp
+Respuesta mi actual pfp:
 
-***Additionally, the `size` query parameter can be added, and it will be added to the request to Discord***
+***Además, se puede agregar el parámetro de consulta `tamaño`, y se agregará a la solicitud a Discord***
 ```
-GET: https://dislookup.am2i9.ml/api/avatar/317734264424890368.webp?size=256
+GET: https://discord-user-lookup.vercel.app/api/avatar/317734264424890368.webp?size=256
+```
+
+### Obtener banner de usuario
+
+**GET**: `/banner/<id>`
+
+Ejemplo: 
+```
+GET: https://discord-user-lookup.vercel.app/api/avatar/924328060738732062.gif
+```
+
+Respuesta mi actual pfp:
+
+```
+GET: https://discord-user-lookup.vercel.app/api/banner/317734264424890368
 ```
