@@ -19,7 +19,11 @@ api.get('/banner/:id', async (req, res) => {
     res.redirect(`https://cdn.discordapp.com/banners/${userData.data.id}/${userData.data.banner}.png`);
 });
 
+api.get('/badges/:id', async (req, res) => {
+    const userData = await getUser(req.params.id);
+    res.send(userData.data.badges);
+});
+
 app.use('/api', api);
 
 module.exports = app;
-
