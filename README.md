@@ -49,12 +49,7 @@ GET: https://discord-user-lookup.vercel.app/api/avatar/317734264424890368.webp?s
 
 **GET**: `/banner/<id>`
 
-Ejemplo: 
-```
-GET: https://discord-user-lookup.vercel.app/api/avatar/924328060738732062.gif
-```
-
-Respuesta mi actual pfp:
+Respuesta mi actual banner:
 
 ```
 GET: https://discord-user-lookup.vercel.app/api/banner/317734264424890368
