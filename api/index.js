@@ -7,9 +7,11 @@ const api = express.Router();
 api.get('/user/:id', async (req, res) => {
   const userData = await getUser(req.params.id);
   const user = userData.data;
-  const bannerUrl = `https://cdn.discordapp.com/banners/${user.id}/${user.banner}.${req.params.format}`;
+  const avatarUrl = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}`;
+  const bannerUrl = `https://cdn.discordapp.com/banners/${user.id}/${user.banner}`;
   res.send({
     ...user,
+    avatarUrl,
     bannerUrl,
     status: user.status,
     aboutMe: user.description,
