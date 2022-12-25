@@ -7,8 +7,7 @@ const api = express.Router();
 api.get('/user/:id', async (req, res) => {
   const userData = await getUser(req.params.id);
   const user = userData.data;
-  const avatarUrl = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}`;
-  const bannerUrl = user.banner ? `https://cdn.discordapp.com/banners/${user.id}/${user.banner}` : null;
+  const bannerUrl = `https://cdn.discordapp.com/banners/${user.id}/${user.banner}.${req.params.format}`;
   res.send({
     ...user,
     bannerUrl,
