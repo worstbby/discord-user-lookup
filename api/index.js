@@ -8,14 +8,15 @@ api.get('/user/:id', async (req, res) => {
   const userData = await getUser(req.params.id);
   const user = userData.data;
   const avatarUrl = `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}`;
-  const bannerUrl = `https://cdn.discordapp.com/banners/${user.id}/${user.banner}`;
+  const bannerUrl = user.banner ? `https://cdn.discordapp.com/banners/${user.id}/${user.banner}` : null;
   res.send({
     ...user,
-    avatarUrl,
     bannerUrl,
     status: user.status,
     aboutMe: user.description,
   });
+});
+
 });
 
 api.get('/avatar/:id.:format', async (req, res) => {
