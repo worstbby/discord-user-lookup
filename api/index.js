@@ -33,6 +33,11 @@ api.get('/badges/:id', async (req, res) => {
     res.send(userData.data.badges);
 });
 
+api.get('/user/flags/:id', async(req, res) => {
+ const userData = await getUser(req.params.id);
+ res.send(userData.data.flags);
+});
+
 app.use('/api', api);
 
 module.exports = app;
